@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>home.html</h1>
+<div class="'container">
+    <h1>home.html</h1>
+        {% for task in all_todoitems %}
+        <div class='row'>
+            <div class='col-md-6' style = 'margin:0 auto;'>
+                <div class="card" style="width: 18rem; margin-top: 1rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{task.title}}</h5>
+                      <p class="card-text">{{task.todo_text}}</p>
+                      <p class="card-text">{{task.creation_time}}</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>  
+            </div>
+        </div>
+        {% endfor %}
+</div>>
 {% endblock %}
